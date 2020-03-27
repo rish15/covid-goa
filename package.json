@@ -1,0 +1,20 @@
+{
+  "name": "covid-goa-backend",
+  "version": "1.0.0",
+  "description": "Backend API's for Goa COVID19 tracker",
+  "main": "app.js",
+  "scripts": {
+	  "start":"nodemon app.js"
+  },
+  "keywords": [
+    "COVID-19",
+    "PANDEMIC"
+  ],
+  "author": "rishu Srivastav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.6",
+    "nodemon": "^2.0.2"
+  }
+}
