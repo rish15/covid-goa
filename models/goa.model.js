@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const goaCasesSchema = mongoose.Schema({
+	id:{
+		type:Number,
+		required:true
+	},
 	confirmed:{
 		type:Number,
 		required:false

@@ -41,8 +41,20 @@ app.get('/goa-cases', async (req,res) =>{
 app.post('/addGoaCases', async(req,res) =>{
 	const request = req.body
 	console.log(request)
+	console.log(request.recovered,request.deceased,request.confirmed,request.suspects,request.id)
 	try{
-		GoaCases.create(request)	
+	const goaCases = await GoaCases.findOneAndUpdate(
+		{id:request.id},
+		{
+			$set:{
+			recovered:request.recovered,
+			deceased:request.deceased,
+			confirmed:request.confirmed,
+			suspects:request.suspects
+		}
+	},
+)	
+console.log(goaCases)
 		res.send({
 			type:'success'
 		})
