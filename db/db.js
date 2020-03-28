@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
-uri ='mongodb+srv://rish15:1OXx0uUqVHd93Azh@cluster0-fl6yg.mongodb.net/covid?retryWrites=true&w=majority'
+const uri = process.env.MONGODB_URL; 
+var URL ='mongodb+srv://rish15:1OXx0uUqVHd93Azh@cluster0-fl6yg.mongodb.net/covid?retryWrites=true&w=majority'
 // Mongoose connection
-mongoose.connect(uri,{
+mongoose.connect(URL,{
                   useNewUrlParser: true,
                   useUnifiedTopology: true
                 });

@@ -5,7 +5,7 @@ const goaCasesSchema = mongoose.Schema({
 		type:Number,
 		required:false
 	},
-	active:{
+	recovered:{
 		type:Number,
 		required:false
 	},
@@ -17,8 +17,9 @@ const goaCasesSchema = mongoose.Schema({
 		type:Number,
 		required:false
 	},
+	
 });
-
+goaCasesSchema.set('timestamps', true);
 const GoaCases = mongoose.model('GoaCases',goaCasesSchema);
 
 module.exports.GoaCases = GoaCases;
